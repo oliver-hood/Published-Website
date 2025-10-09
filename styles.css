@@ -1,0 +1,98 @@
+:root {
+  --bg: #1a1a1a;      
+  --text: #a7c27a;     
+  --muted: #c9d8a8;    
+  --link: #cfe69a;     
+  --border: #2a2a2a;  
+}
+
+html, body {
+  margin: 0;
+  padding: 10;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Merriweather", serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.site-title {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.35rem;
+}
+
+.site-nav a:hover {
+  background: #252525;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 1.2rem 0 0.4rem;
+}
+
+p, li, figcaption {
+  color: var(--muted);
+}
+
+.hero-figure {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.assignment-list {
+  padding-left: 1.25rem;
+}
+
+.assignment-list a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.assignment-list a:hover {
+  text-decoration: underline;
+  color: #fff !important;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
