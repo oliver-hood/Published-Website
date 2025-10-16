@@ -1,0 +1,190 @@
+/* -----------------------------
+   Base / Variables
+   ----------------------------- */
+:root {
+  --bg: #0f1115;           /* near-black */
+  --bg-2: #141821;         /* dark grey */
+  --text: #e6e6e6;         /* light grey text */
+  --muted: #b9bec7;        /* muted text */
+  --accent: #6aa3ff;       /* soft blue accent */
+  --accent-2: #8d7bff;     /* secondary accent */
+  --card: #1a1f2a;         /* panel background */
+  --border: #2a3242;       /* subtle border */
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* Typography: Inter (sans) & Merriweather (serif) */
+html {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background:
+    radial-gradient(60vmax 60vmax at 10% -10%, rgba(138,113,255,.06), transparent 40%),
+    radial-gradient(50vmax 50vmax at 120% 10%, rgba(106,163,255,.05), transparent 40%),
+    linear-gradient(135deg, var(--bg), var(--bg-2));
+  background-attachment: fixed;
+  background-color: var(--bg);
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  letter-spacing: .3px;
+}
+
+h1.site-title {
+  font-family: "Merriweather", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3vw + 1rem, 3rem);
+  margin: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: clamp(1.4rem, 1.2vw + 1rem, 2rem);
+  margin-bottom: .5rem;
+}
+
+p, li, figcaption {
+  color: var(--muted);
+}
+
+strong { color: var(--text); }
+
+/* Layout */
+.container {
+  max-width: 1050px;
+  margin-inline: auto;
+  padding: 2rem clamp(1rem, 3vw, 2rem);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(15,17,21,.85), rgba(15,17,21,.6) 60%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding: .6rem .9rem;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  background: rgba(138,113,255,.08);
+  border-color: var(--border);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: .5rem .75rem;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+}
+
+/* Hero */
+.hero-figure {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+.hero-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: .75rem;
+}
+.hero-figure figcaption {
+  margin-top: .6rem;
+  font-size: .95rem;
+}
+
+/* About + Assignments sections */
+.about, .assignments {
+  margin-top: 2rem;
+}
+
+.assignment-list {
+  padding-left: 1.25rem;
+}
+.assignment-list a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: border-color .2s ease;
+}
+.assignment-list a:hover,
+.assignment-list a:focus-visible {
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 3rem;
+  border-top: 1px solid var(--border);
+  background: rgba(0,0,0,.2);
+}
+.site-footer .container {
+  text-align: center;
+  font-size: .95rem;
+  color: var(--muted);
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .site-nav ul {
+    gap: .5rem;
+    flex-wrap: wrap;
+  }
+}
