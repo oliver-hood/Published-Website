@@ -28,3 +28,15 @@ footer {
   padding: 10px;
 
 }
+
+.Why em{
+  font-weight: bold;
+  color: forestgreen;
+  font-size: 1.1em;
+  font-family:"Inter"
+}
+
+img{
+  max-width: 600px;
+  min-width: 200px;
+}
