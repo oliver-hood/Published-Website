@@ -1,0 +1,111 @@
+/* yeseva-one-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/yeseva-one-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* josefin-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/josefin-sans-v34-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+              
+html {font-size: 16px;}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: false;
+  line-height: 1.65;
+}
+
+p {
+  font-size: 1em;
+}
+
+h1,
+.text-size-h1 {
+  font-family: 'Yeseva One', serif;
+  font-weight: 500;
+  margin-top: 0;
+  font-size: 5.65em;
+}
+
+h2,
+.text-size-h2 { font-size: 4em; }
+
+h3,
+.text-size-h3 { font-size: 2.83em; }
+
+h4,
+.text-size-h4 { font-size: 2em; }
+
+h5,
+.text-size-h5 { font-size: 1.41em; }
+
+.text-caption { font-size: 0.71em; }
+
+small,
+.text-small {
+  font-size: 0.5em;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #1b263b;
+  background: -moz-linear-gradient(45deg, #1b263b 0%, #778da9 100%);
+}
+
+.header {
+  height: 200px;
+  text-align: center;
+  position: relative;
+  
+  color: #e0e1dd;
+  font-family: 'Yeseva One', Serif;
+  margin:500px;
+}
+
+h1{
+  font-family:'Yeseva One', Serif ;
+}
+
+.body {
+  margin: 40px auto;
+  padding: 20px 30px 40px 30px;
+  background-color: #e0e1dd;
+  overflow: auto;
+  width: 75%;
+  border-radius: 4px;
+  align-self: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.body p {
+  color: #778da9;
+  text-align: center;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+}
+.body ul{
+  color: #778da9;
+  text-align: center;
+  list-style-type: none;
+  positiion: relative;
+  margin-left: -75px;
+  font-size: 2em;
+}
+
+.body h3{
+  text-align: center;
+  color: #1b263b;
+}
+
