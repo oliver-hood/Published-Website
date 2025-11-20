@@ -1,0 +1,421 @@
+/* Reset margins */
+body, h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*             Typography            */
+
+/* lato-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/lato-v25-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* baskervville-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Baskervville';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/baskervville-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+html {font-size: 17px;}
+
+body {
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+p {
+  font-size: 1em;
+  font-family: 'Baskervville', serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+ul{
+  font-size: 1.33em;
+  font-family: 'Lato', sans-serif;
+}
+h1,
+.text-size-h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  margin-top: 0;
+  font-size: 4.21em;
+}
+
+h2,
+.text-size-h2 { 
+  font-size: 3.16em; 
+}
+
+h3,
+.text-size-h3 { 
+  font-size: 2.37em; 
+}
+
+h4,
+.text-size-h4 { 
+  font-size: 1.78em; 
+}
+
+h5,
+.text-size-h5 { 
+  font-size: 1.33em; 
+}
+
+.text-caption { 
+  font-size: 0.75em; 
+}
+
+small,
+.text-small {
+  font-size: 0.56em;
+  font-family: 'Lato', sans-serif;
+}
+
+em {
+  font-weight: 600;
+}
+
+.paragraphs p{
+  font-family: Baskervville;
+}
+
+
+/*                Layout & Design               */
+
+/* Body layout */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header & Nav Layout */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.header img{
+  width: 60px;
+  height: auto;
+  margin-right: 50px;
+}
+
+.title {
+  margin-left: 10px;
+  flex: 1;
+}
+
+
+.navigation ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  margin: 0 10px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding-bottom: 3px;
+}
+
+/* Main body div */
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-top: 20px;
+}
+
+/* Image and intro text*/
+.hero-image, .intro {
+  width: 45%;
+  margin: 20px;
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+/* Main image text layout*/
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.intro-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Factoid layout */
+.factoids {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.factoids div {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  margin: 10px 0;
+}
+
+.factoids img {
+  min-width: 15px;
+  min-height: 15px;
+  max-width: 200px;
+  max-height: 200px;
+  margin-right: 30px;
+}
+
+.factoids p {
+  width: 80%;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-header h3 {
+  margin-bottom: 10px;
+}
+
+/* Call to Action Button */
+.footer-contact .button {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 10px 0;
+  position: relative;
+  overflow: hidden; 
+}
+/* Button Animation */
+.footer-contact .button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: red;
+  transition: width 0.3s ease;
+}
+  .footer-contact .button:hover::after {
+  width: 100%;
+}
+
+/* Footer Navigation Stuff */
+.footer-navigation ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.footer-navigation li {
+  margin: 0 10px;
+}
+
+.footer-navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.text-small {
+margin-top: 10px;
+}
+
+/* Activity page layout */
+.activites {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.activites div {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 20px 0;
+}
+
+.activites img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.activites h4{
+  margin-bottom: 10px;
+}
+
+/* Dining page layout */
+.food {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.food div {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 20px 0;
+}
+
+.food img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.food h4 {
+  margin-bottom: 10px;
+}
+
+/* Design statement layout */
+.Design-Statement {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.Design-Statement .paragraphs {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  line-height: 1.1em;
+}
+
+.Design-Statement h4 { 
+  margin: 10px 0 4px; }
+
+/* Form stuff */
+.intro form {
+  background: rgba(255,255,255,0.75);
+  border-radius: 12px;
+  padding: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-family: 'Baskervville', Serif;
+}
+
+
+/* Random Design Improvements & Aesthetics*/
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to bottom,
+    hsl(0, 100%, 49.02%) 0%,
+    hsl(358.22, 94.73%, 52.63%) 3.5%,
+    hsl(356.15, 90.97%, 55.56%) 6.2%,
+    hsl(353.63, 84.79%, 57.86%) 8.5%,
+    hsl(350.41, 76.28%, 59.58%) 10.5%,
+    hsl(346.07, 65.69%, 60.74%) 12.6%,
+    hsl(339.72, 53.46%, 61.37%) 15%,
+    hsl(329.37, 40.16%, 61.5%) 18.1%,
+    hsl(309.08, 26.48%, 61.17%) 22.1%,
+    hsl(272.77, 26.84%, 64.71%) 27.4%,
+    hsl(241.33, 32.86%, 69.19%) 34.1%,
+    hsl(222.37, 48.11%, 68.56%) 42.6%,
+    hsl(213.75, 60.79%, 67.44%) 53.1%,
+    hsl(209.12, 70.04%, 66.25%) 66%,
+    hsl(206.69, 75.71%, 65.29%) 81.6%,
+    hsl(205.9, 77.65%, 64.9%) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.body, .activites, .food {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.navigation a:hover, 
+.footer-navigation a:hover {
+  text-decoration: underline;
+  color: #ffffff; 
+}
+
+/* Round image corners cause I'm an Apple fanboy.  */
+img {
+  border-radius: 10px;
+}
+
+

@@ -1,0 +1,181 @@
+/* 
+      .--..--..--..--..--..--.
+    .' \  (`._   (_)     _   \
+  .'    |  '._)         (_)  |
+  \ _.')\      .----..---.   /
+  |(_.'  |    /    .-\-.  \  |
+  \     0|    |   ( O| O) | o|
+   |  _  |  .--.____.'._.-.  |
+   \ (_) | o         -` .-`  |
+    |    \   |`-._ _ _ _ _\ /
+    \    |   |  `. |_||_|   |
+    | o  |    \_      \     |     -.   .-.
+    |.-.  \     `--..-'   O |     `.`-' .'
+  _.'  .' |     `-.-'      /-.__   ' .-'
+.' `-.` '.|='=.='=.='=.='=|._/_ `-'.'
+`-._  `.  |________/\_____|    `-.'
+   .'   ).| '=' '='\/ '=' |
+   `._.`  '---------------'
+           //___\   //___\
+             ||       ||
+             ||_.-.   ||_.-.
+            (_.--__) (_.--__)
+       
+
+ Insert all your glorious CSS styles below! */
+html, body { /*reset*/
+  margin: 0;
+  padding: 0;
+}
+
+/* layout with percents cause its easier */
+.header {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+h1, h2 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+p {
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.teamates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.teamates img {
+  width: 100%;
+  max-height: 432px; 
+  object-fit: cover;    
+  display: block;
+}
+
+/* typography & font */
+  * lato-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/lato-v25-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* baskervville-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Baskervville';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/baskervville-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+html {font-size: 17px;}
+
+body {
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+p {
+  font-size: 1em;
+  font-family: 'Baskervville', serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+ul{
+  font-size: 1.33em;
+  font-family: 'Lato', sans-serif;
+}
+h1,
+.text-size-h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  margin-top: 0;
+  font-size: 4.21em;
+}
+
+h2,
+.text-size-h2 { 
+  font-size: 3.16em; 
+}
+
+h3,
+.text-size-h3 { 
+  font-size: 2.37em; 
+}
+
+h4,
+.text-size-h4 { 
+  font-size: 1.78em; 
+}
+
+h5,
+.text-size-h5 { 
+  font-size: 1.33em; 
+}
+
+.text-caption { 
+  font-size: 0.75em; 
+}
+
+small,
+.text-small {
+  font-size: 0.56em;
+  font-family: 'Lato', sans-serif;
+}
+
+em {
+  font-weight: 600;
+}
+
+.paragraphs p{
+  font-family: Baskervville;
+}
+
+/* some crappy color pallette i stole off the internet */
+
+html {
+  --periwinkle: #747AC4; 
+  --sage:       #9BC3A2; 
+  --peach:      #FFDAD7; 
+  --deep-blue:  #0F1DA2; 
+  --royal-blue: #0014B7; 
+}
+
+body {
+  background: var(--peach);
+  color: black;
+}
+
+.header {
+  background: var(--periwinkle);
+  color: white;
+}
+
+h1, h2 {
+  color: var(--deep-blue);
+}
